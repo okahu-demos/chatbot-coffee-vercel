@@ -1,7 +1,6 @@
 import { logger } from '@/libs/Logger';
 import { NextResponse } from 'next/server';
 import { langchainInvoke } from './langchain';
-import { waitUntil } from '@vercel/functions';
 
 export const POST = async (request: Request) => {
   console.log("MONOCLE_EXPORTER")
@@ -16,8 +15,6 @@ export const POST = async (request: Request) => {
   const llmResponse = await langchainInvoke(json.message);
 
   console.log("Response from llm:", llmResponse);
-
-  waitUntil(new Promise(resolve => setTimeout(resolve, 3000)));
 
   return NextResponse.json({
     message: {
