@@ -15,6 +15,11 @@ export const POST = async (request: Request) => {
   const llmResponse = await langchainInvoke(json.message);
 
   console.log("Response from llm:", llmResponse);
+
+  setTimeout(() => {
+    console.log("hello after 2000")
+  }, 2000);
+
   return NextResponse.json({
     message: {
       role: "assistant",
