@@ -63,7 +63,38 @@ This demo is managed by the following LF contributors to Monocle: *Okahu*.[^1]
 
 ### Deploy this app as a project to Vercel 
 
-// coming soon 
+- Prerequsites
+   - OpenAI account with a valid [API key](https://platform.openai.com/settings/organization/api-keys) - used by the chatbot to create embeddings and serve up answers to users 
+   - AWS [S3 bucket](https://us-east-1.console.aws.amazon.com/s3/get-started?region=us-east-1)  with read and write privileges - used to store and serve up telemetry data
+      - Make sure to include "https://*.vercel.app" in "AllowedOrigins" of [CORS configuration](https://docs.aws.amazon.com/AmazonS3/latest/userguide/enabling-cors-examples.html?icmpid=docs_amazons3_console)
+   - Vercel [account](https://vercel.com/login) - used to host the app 
+
+To deploy this app to Vercel 
+1. Fork this repo into your Github
+2. Create a Vercel Project with your forked Github repo 
+3. Specify environment variables 
+
+Used for model inference 
+```
+OPENAI_API_KEY= 
+```
+Used to read S3 bucket from app
+```
+AWS_ACCESS_KEY_ID_S3= 
+AWS_SECRET_ACCESS_KEY_S3= 
+S3_BUCKET_NAME= 
+S3_KEY_PREFIX=monocle_trace_ 
+```
+Config for Monocle instrumentation
+```
+MONOCLE_EXPORTER=s3
+MONOCLE_S3_BUCKET_NAME=
+MONOCLE_S3_KEY_PREFIX=monocle_trace_
+MONOCLE_AWS_SECRET_ACCESS_KEY=
+MONOCLE_AWS_ACCESS_KEY_ID=
+```
+4. Deploy the project 
+
 
 ### Add your own data (optional)
 
