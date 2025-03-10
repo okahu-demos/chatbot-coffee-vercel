@@ -6,6 +6,6 @@ export function register() {
     console.log("Registering instrumentation")
     // this reisters monocle instrumentation
     setupMonocle(
-        "openai.app"
+        "chat-vercel-coffee-wf"
     )
 }

@@ -52,7 +52,7 @@ This demo is managed by the following LF contributors to Monocle: *Okahu*.[^1]
 
 - Add monocle2ai to [instrumentation.ts](src/instrumentation.ts) per NextJS [convention](https://nextjs.org/docs/app/api-reference/file-conventions/instrumentation)
   - `const { setupMonocle } = require("monocle2ai")` specifies use of the Monocle npm package
-  - `setupMonocle("openai.app")` specifies tracing and metadata to add to traces
+  - `setupMonocle("chat-vercel-coffee-wf")` specifies tracing and metadata to add to traces
 
 - Add package dependency and environment variables to configure where to send traces
   - Include `"monocle2ai": "^0.0.1-beta.2"` in [package.json](package.json)
