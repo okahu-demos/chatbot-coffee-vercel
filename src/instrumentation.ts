@@ -1,4 +1,3 @@
-// @ts-ignore
 import { setupMonocle } from 'monocle2ai';
 
 export function register() {
