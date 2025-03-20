@@ -5,7 +5,7 @@
     "dev:next": "next dev",
     "dev": "run-p dev:*",
     "build": "node ./scripts/patch_module_llamaindex.js && node ./scripts/patch_module_openai.js && node ./scripts/patch_module_langchain.js && next build",
-    "start": "NODE_OPTIONS=\"--require=./node_modules/monocle2ai/scripts/httpHook.js\" next start",
+    "start": "next start",
     "build-stats": "cross-env ANALYZE=true npm run build",
     "clean": "rimraf .next out coverage",
     "lint": "eslint .",
