@@ -52,7 +52,7 @@ export async function GET(request: Request) {
         });
 
     } catch (error) {
-        logger.error(`Error downloading file ${key}:`, error);
+        logger.error(error, `Error downloading file ${key}`);
         return NextResponse.json({ error: 'Error downloading file' }, { status: 500 });
     }
 }

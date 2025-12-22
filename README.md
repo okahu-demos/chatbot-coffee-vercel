@@ -55,7 +55,7 @@ This demo is managed by the following LF contributors to Monocle: *Okahu*.[^1]
   - `setupMonocle("openai.app")` specifies tracing and metadata to add to traces
 
 - Add package dependency and environment variables to configure where to send traces
-  - Include `"monocle2ai": "^0.0.1-beta.2"` in [package.json](package.json)
+  - Include `"monocle2ai"` in [package.json](package.json)
   - See [.env](.env) for environment variables to specify where Monocle sends the traces
      - In this example the traces are sent to a bucket in AWS S3. 
 
