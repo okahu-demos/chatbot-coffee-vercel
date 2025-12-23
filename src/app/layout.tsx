@@ -1,7 +1,7 @@
 
 export default async function RootLayout(props: {
   children: React.ReactNode;
-  params: Promise<{ locale: string }>;
+  params: Promise<{}>;
 }) {
 
   // The `suppressHydrationWarning` attribute in <body> is used to prevent hydration errors caused by Sentry Overlay,

@@ -51,7 +51,7 @@ export async function GET(request: Request) {
 
         return NextResponse.json({ files });
     } catch (error) {
-        logger.error(`Error listing S3 files for session ${sessionId}:`, error);
+        logger.error(error, `Error listing S3 files for session ${sessionId}`);
         return NextResponse.json({ error: 'Error listing S3 files' }, { status: 500 });
     }
 }
